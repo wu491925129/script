@@ -10,7 +10,7 @@ function strToTimestamp(time) {
     return Date.parse(new Date(pushDate)) / 1000;
 }
 
-console.log(JSON.stringify($response.body));
+console.log($response.body);
 
 var data = {
     "success": true,
