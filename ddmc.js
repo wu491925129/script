@@ -9,7 +9,7 @@ let data = {
         "default_select": false,
         "time": [
             {
-                "date_str": "今天",
+                "date_str": "今天(脚本破解)",
                 "date_str_timestamp": nowTime,
                 "day": "today",
                 "times": [
