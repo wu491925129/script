@@ -10,6 +10,8 @@ function strToTimestamp(time) {
     return Date.parse(new Date(pushDate)) / 1000;
 }
 
+console.log(strToTimestamp("08:00:00"));
+
 var data = {
     "success": true,
     "code": 0,
@@ -21,7 +23,7 @@ var data = {
             "time": [
                 {
                     "date_str": "今天(来自Max破解)",
-                    "date_str_timestamp": this.nowTime,
+                    "date_str_timestamp": nowTime,
                     "day": "today",
                     "times": [
                         {
