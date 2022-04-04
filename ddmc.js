@@ -1,12 +1,16 @@
 var nowTime = Date.parse(new Date())/1000;
 
-var date = new Date();
-var year = date.getFullYear();
-var month = date.getMonth() + 1;
-var day = date.getDate();
+// 获取时间戳
+function strToTimestamp(time) {
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var pushDate =  year + "/" + month + "/" + day+" "+time;
+    return Date.parse(new Date(pushDate)) / 1000;
+}
 
-console.log(Date.parse(new Date(year + "-" + month + "-" + day+" "+"08:00:00")) / 1000)
-
+console.log(strToTimestamp("08:00:00"));
 
 var data = {
     "success": true,
@@ -30,8 +34,8 @@ var data = {
                             "textMsg": "",
                             "start_time": "08:30",
                             "end_time": "10:30",
-                            "start_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"08:30:00")) / 1000,
-                            "end_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"10:30:00")) / 1000,
+                            "start_timestamp": strToTimestamp("08:30:00"),
+                            "end_timestamp": strToTimestamp("10:30:00"),
                             "arrival_time_msg": "08:50-10:30",
                             "arrival_time": false,
                             "select_msg": "今天08:50-10:30"
@@ -44,8 +48,8 @@ var data = {
                             "textMsg": "",
                             "start_time": "10:30",
                             "end_time": "14:30",
-                            "start_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"10:30:00")) / 1000,
-                            "end_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"14:30:00")) / 1000,
+                            "start_timestamp": strToTimestamp("10:30:00"),
+                            "end_timestamp": strToTimestamp("14:30:00"),
                             "arrival_time_msg": "10:30-14:30",
                             "arrival_time": false,
                             "select_msg": "今天10:30-14:30"
@@ -58,8 +62,8 @@ var data = {
                             "textMsg": "",
                             "start_time": "14:30",
                             "end_time": "18:30",
-                            "start_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"14:30:00")) / 1000,
-                            "end_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"18:30:00")) / 1000,
+                            "start_timestamp": strToTimestamp("14:30:00"),
+                            "end_timestamp": strToTimestamp("18:30:00"),
                             "arrival_time_msg": "14:30-18:30",
                             "arrival_time": false,
                             "select_msg": "今天14:30-18:30"
@@ -72,8 +76,8 @@ var data = {
                             "textMsg": "",
                             "start_time": "18:30",
                             "end_time": "22:00",
-                            "start_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+"18:30:00")) / 1000,
-                            "end_timestamp": Date.parse(new Date(year + "-" + month + "-" + day+" "+":22:00:00")) / 1000,
+                            "start_timestamp": strToTimestamp("18:30:00"),
+                            "end_timestamp": strToTimestamp("22:00:00"),
                             "arrival_time_msg": "18:30-22:00",
                             "arrival_time": false,
                             "select_msg": "今天18:30-22:00"
