@@ -14,7 +14,7 @@ function strToTimestamp(str) {
     return Date.parse(new Date(str)) / 1000;
 }
 
-let data = {
+var data = {
     "success": true,
     "code": 0,
     "msg": "success",
