@@ -11,7 +11,7 @@ function strToTimestamp(time) {
 }
 
 // 获取当前站点id
-var stationId = $request.header.ddmc-station-id;
+var stationId = $request.headers.ddmc-station-id;
 
 console.log(stationId);
 var data = {
