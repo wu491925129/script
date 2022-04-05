@@ -10,11 +10,12 @@ function strToTimestamp(time) {
     return Date.parse(new Date(pushDate)) / 1000;
 }
 
-console.log($request.headers);
-// 获取当前站点id
-var stationId = $request.headers.ddmc-station-id;
 
+// 获取当前站点id
+var res = JSON.parse($response.body);
+var stationId = res.success ? res.data[0].station_id : "";
 console.log(stationId);
+
 var data = {
     "success": true,
     "code": 0,
