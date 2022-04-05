@@ -20,6 +20,8 @@ function strToTimestamp(time) {
 var res = JSON.parse($response.body);
 var stationId = res.success ? res.data[0].station_id : "";
 
+console.log("重写叮咚开始....")
+
 
 var data = {
     "success": true,
