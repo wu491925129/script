@@ -14,7 +14,7 @@ function strToTimestamp(time) {
 // 获取当前站点id
 var res = JSON.parse($response.body);
 var stationId = res.success ? res.data[0].station_id : "";
-console.log(stationId);
+
 
 var data = {
     "success": true,
