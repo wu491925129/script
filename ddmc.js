@@ -1,3 +1,8 @@
+/**
+ *
+ * @type {number}
+ */
+
 var nowTime = Date.parse(new Date())/1000;
 
 // 获取时间戳
