@@ -10,8 +10,10 @@ function strToTimestamp(time) {
     return Date.parse(new Date(pushDate)) / 1000;
 }
 
-console.log($response.body);
+// 获取当前站点id
+var stationId = $request.header.ddmc-station-id;
 
+console.log(stationId);
 var data = {
     "success": true,
     "code": 0,
@@ -88,7 +90,7 @@ var data = {
                     "time_full_text_tip": null
                 }
             ],
-            "station_id": "5b988449c0a1ea8f1c8b5a6b",
+            "station_id": stationId,
             "is_new_rules": true,
             "busy_soon_arrival_text": "",
             "eta_trace_id": "",
