@@ -14,10 +14,11 @@ var data = {
 var res = JSON.parse($response.body);
 
 console.log("重写订单校验")
-console.log($response.body)
+
 
 if (!res.success) {
     $done({ body: JSON.stringify(data) });
+    console.log($response.body)
 } else {
     $done({ body: $response.body });
 }
