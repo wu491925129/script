@@ -11,4 +11,12 @@ var data = {
     }
 }
 
-$done({ body: JSON.stringify(data) });
+var res = JSON.parse($response.body);
+
+if (!res.success) {
+    $done({body: JSON.stringify(data)});
+} else {
+    $done({ body: $response.body });
+}
+
+
