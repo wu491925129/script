@@ -1,6 +1,50 @@
 /**
- *
- * @type {number}
+ * 自动选择时间
+ * {
+ *     "success": true,
+ *     "code": 0,
+ *     "msg": "success",
+ *     "data": [
+ *         {
+ *             "station_delay_text": null,
+ *             "default_select": true,
+ *             "time": [
+ *                 {
+ *                     "date_str": "今天",
+ *                     "date_str_timestamp": 1680123600,
+ *                     "day": "today",
+ *                     "times": [
+ *                         {
+ *                             "type": 4,
+ *                             "fullFlag": false,
+ *                             "disableType": 0,
+ *                             "disableMsg": "",
+ *                             "textMsg": "",
+ *                             "start_time": "5:59",
+ *                             "end_time": "23:00",
+ *                             "start_timestamp": 1680123600,
+ *                             "end_timestamp": 1680188400,
+ *                             "arrival_time_msg": "自动尝试可用时段",
+ *                             "arrival_time": false,
+ *                             "select_msg": "自动尝试可用时段"
+ *                         }
+ *                     ],
+ *                     "is_invalid": false,
+ *                     "invalid_prompt": null,
+ *                     "time_full_text_tip": null
+ *                 }
+ *             ],
+ *             "station_id": "",
+ *             "is_new_rules": true,
+ *             "busy_soon_arrival_text": "",
+ *             "eta_trace_id": "",
+ *             "area_level": 1
+ *         }
+ *     ],
+ *     "tradeTag": "success",
+ *     "server_time": 1680037200,
+ *     "is_trade": 1
+ * }
  */
 
 var nowTime = Date.parse(new Date())/1000;
@@ -20,8 +64,7 @@ function strToTimestamp(time) {
 var res = JSON.parse($response.body);
 var stationId = res.success ? res.data[0].station_id : "";
 
-console.log("重写叮咚开始....")
-
+console.log("重写叮咚配送时间开始....")
 
 var data = {
     "success": true,
@@ -111,4 +154,57 @@ var data = {
     "is_trade": 1
 }
 
-$done({ body: JSON.stringify(data) });
+var defaultData = {
+    "success": true,
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "station_delay_text": null,
+            "default_select": true,
+            "time": [
+                {
+                    "date_str": "今天",
+                    "date_str_timestamp": nowTime,
+                    "day": "today",
+                    "times": [
+                        {
+                            "type": 4,
+                            "fullFlag": false,
+                            "disableType": 0,
+                            "disableMsg": "",
+                            "textMsg": "",
+                            "start_time": "5:59",
+                            "end_time": "23:00",
+                            "start_timestamp": strToTimestamp("05:59"),
+                            "end_timestamp": strToTimestamp("23:00"),
+                            "arrival_time_msg": "自动尝试可用时段",
+                            "arrival_time": false,
+                            "select_msg": "自动尝试可用时段"
+                        }
+                    ],
+                    "is_invalid": false,
+                    "invalid_prompt": null,
+                    "time_full_text_tip": null
+                }
+            ],
+            "station_id": "",
+            "is_new_rules": true,
+            "busy_soon_arrival_text": "",
+            "eta_trace_id": "",
+            "area_level": 1
+        }
+    ],
+    "tradeTag": "success",
+    "server_time": 1680037200,
+    "is_trade": 1
+}
+
+// 判断是否是自动选择时间
+if (res.success && res.data[0].time[0].times[0].arrival_time_msg == "自动尝试可用时段") {
+    $done({body: JSON.stringify(defaultData)});
+} else {
+    $done({body: JSON.stringify(res)});
+}
+
+
