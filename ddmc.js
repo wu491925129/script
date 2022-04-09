@@ -47,7 +47,7 @@ var data = {
                             "end_time": "10:30",
                             "start_timestamp": strToTimestamp("08:30:00"),
                             "end_timestamp": strToTimestamp("10:30:00"),
-                            "arrival_time_msg": "08:50-10:30",
+                            "arrival_time_msg": "08:30-10:30",
                             "arrival_time": false,
                             "select_msg": "今天08:50-10:30"
                         },
