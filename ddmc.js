@@ -257,11 +257,11 @@ var defaultData = {
     "is_trade": 1
 }
 
-// 判断是否是自动选择时间
-if (res.success && res.data[0].time[0].times[0].arrival_time_msg == "自动尝试可用时段") {
+// 判断是否是自动选择时间  0410测试默认时间可用
+/*if (res.success && res.data[0].time[0].times[0].arrival_time_msg == "自动尝试可用时段") {
     $done({body: JSON.stringify(defaultData)});
 } else {
-    $done({body: JSON.stringify(defaultData)});
-}
-
+    $done({body: JSON.stringify(data)});
+}*/
+$done({body: JSON.stringify(defaultData)});
 
