@@ -221,7 +221,7 @@ var defaultData = {
             "default_select": true,
             "time": [
                 {
-                    "date_str": "今天",
+                    "date_str": "今天(来自Max破解)",
                     "date_str_timestamp": nowTime,
                     "day": "today",
                     "times": [
@@ -233,8 +233,8 @@ var defaultData = {
                             "textMsg": "",
                             "start_time": "5:59",
                             "end_time": "23:00",
-                            "start_timestamp": strToTimestamp("05:59"),
-                            "end_timestamp": strToTimestamp("23:00"),
+                            "start_timestamp": 1680123600,
+                            "end_timestamp": 1680188400,
                             "arrival_time_msg": "自动尝试可用时段",
                             "arrival_time": false,
                             "select_msg": "自动尝试可用时段"
