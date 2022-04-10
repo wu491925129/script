@@ -43,29 +43,34 @@
 
 var res = JSON.parse($response.body);
 
-var data = {
-    "success" : false,
-    "code" : -3001,
-    "tips" : {
-        "duration" : 300,
-        "limitMsg" : "下单日期已失效（理性重试，频繁可能封号）"
-    },
-    "msg" : "当前人多拥挤，请稍后尝试刷新页面",
-    "data" : {
+function getDirectData(msg) {
+    return  {
+        "success" : false,
+        "code" : -3001,
+        "tips" : {
+            "duration" : 300,
+            "limitMsg" : msg
+        },
+        "msg" : msg,
+        "data" : {
 
-    },
-    "barrier" : {
-        "maxCount" : 5,
-        "passRatio" : 0.5
+        },
+        "barrier" : {
+            "maxCount" : 5,
+            "passRatio" : 0.5
+        }
     }
 }
 
 if (res.success == false && res.code == 5004) {
     console.log("下单时间失效，开始数据替换...");
-    $done({body: JSON.stringify(data)});
+    $done({body: JSON.stringify(getDirectData("下单日期已失效(理性重试，频繁可能封号)"))});
 } else if (res.success == false && res.code == -3001) {
     console.log("服务器繁忙，正在重试...")
     $done({body: $response.body});
+} else if (res.success == false && res.code == 5003){
+    console.log("送达时间已抢光，正在数据替换...");
+    $done({body: JSON.stringify(getDirectData("送达时间已抢光(理性重试，频繁可能封号)"))});
 } else {
     $done({body: $response.body});
 }
