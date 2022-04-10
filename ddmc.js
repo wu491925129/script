@@ -197,7 +197,7 @@ var data = {
             ],
             "is_new_rules" : true,
             "interval_minute" : -1,
-            "default_select" : false,
+            "default_select" : true,
             "eta_trace_id" : "",
             "station_id" : "5b988449c0a1ea8f1c8b5a6b",
             "area_level" : 1,
@@ -257,7 +257,7 @@ var defaultData = {
     "is_trade": 1
 }
 
-// 判断是否是自动选择时间  0410测试默认时间可用
+// 判断是否是自动选择时间  默认选中可配送的时间
 if (res.success && res.data[0].time[0].times[0].arrival_time_msg == "自动尝试可用时段") {
     $done({body: JSON.stringify(defaultData)});
 } else {
