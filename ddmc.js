@@ -67,91 +67,148 @@ var stationId = res.success ? res.data[0].station_id : "";
 console.log("重写叮咚配送时间开始....")
 
 var data = {
-    "success": true,
-    "code": 0,
-    "msg": "success",
-    "data": [
+    "server_time" : nowTime,
+    "data" : [
         {
-            "station_delay_text": null,
-            "default_select": false,
-            "time": [
+            "station_delay_text" : null,
+            "time" : [
                 {
-                    "date_str": "今天(来自Max破解)",
-                    "date_str_timestamp": nowTime,
-                    "day": "today",
-                    "times": [
+                    "invalid_prompt" : null,
+                    "date_str_timestamp" : nowTime,
+                    "day" : "today",
+                    "date_str" : "今天(来自Max破解)",
+                    "times" : [
                         {
-                            "type": 4,
-                            "fullFlag": true,
-                            "disableType": 0,
-                            "disableMsg": null,
-                            "textMsg": "",
-                            "start_time": "08:30",
-                            "end_time": "10:30",
-                            "start_timestamp": strToTimestamp("08:30:00"),
-                            "end_timestamp": strToTimestamp("10:30:00"),
-                            "arrival_time_msg": "08:30-10:30",
-                            "arrival_time": false,
-                            "select_msg": "今天08:50-10:30"
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "08:00",
+                            "arrival_time_msg" : "08:00-08:30",
+                            "select_msg" : "今天08:00-08:30",
+                            "end_time" : "08:30",
+                            "end_timestamp" : strToTimestamp("08:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("08:00")
                         },
                         {
-                            "type": 4,
-                            "fullFlag": false,
-                            "disableType": 0,
-                            "disableMsg": null,
-                            "textMsg": "",
-                            "start_time": "10:30",
-                            "end_time": "14:30",
-                            "start_timestamp": strToTimestamp("10:30:00"),
-                            "end_timestamp": strToTimestamp("14:30:00"),
-                            "arrival_time_msg": "10:30-14:30",
-                            "arrival_time": false,
-                            "select_msg": "今天10:30-14:30"
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "08:30",
+                            "arrival_time_msg" : "08:30-10:30",
+                            "select_msg" : "今天08:30-10:30",
+                            "end_time" : "10:30",
+                            "end_timestamp" : strToTimestamp("10:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("08:30")
                         },
                         {
-                            "type": 4,
-                            "fullFlag": true,
-                            "disableType": 0,
-                            "disableMsg": null,
-                            "textMsg": "",
-                            "start_time": "14:30",
-                            "end_time": "18:30",
-                            "start_timestamp": strToTimestamp("14:30:00"),
-                            "end_timestamp": strToTimestamp("18:30:00"),
-                            "arrival_time_msg": "14:30-18:30",
-                            "arrival_time": false,
-                            "select_msg": "今天14:30-18:30"
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "10:30",
+                            "arrival_time_msg" : "10:30-12:30",
+                            "select_msg" : "今天10:30-12:30",
+                            "end_time" : "12:30",
+                            "end_timestamp" : strToTimestamp("12:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("10:30")
                         },
                         {
-                            "type": 4,
-                            "fullFlag": true,
-                            "disableType": 0,
-                            "disableMsg": null,
-                            "textMsg": "",
-                            "start_time": "18:30",
-                            "end_time": "22:00",
-                            "start_timestamp": strToTimestamp("18:30:00"),
-                            "end_timestamp": strToTimestamp("22:00:00"),
-                            "arrival_time_msg": "18:30-22:00",
-                            "arrival_time": false,
-                            "select_msg": "今天18:30-22:00"
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "12:30",
+                            "arrival_time_msg" : "12:30-14:30",
+                            "select_msg" : "今天12:30-14:30",
+                            "end_time" : "14:30",
+                            "end_timestamp" : strToTimestamp("14:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("12:30")
+                        },
+                        {
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "14:30",
+                            "arrival_time_msg" : "14:30-16:30",
+                            "select_msg" : "今天14:30-16:30",
+                            "end_time" : "16:30",
+                            "end_timestamp" : strToTimestamp("16:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("14:30")
+                        },
+                        {
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "16:30",
+                            "arrival_time_msg" : "16:30-18:30",
+                            "select_msg" : "今天16:30-18:30",
+                            "end_time" : "18:30",
+                            "end_timestamp" : strToTimestamp("18:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("16:30")
+                        },
+                        {
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "18:30",
+                            "arrival_time_msg" : "18:30-20:30",
+                            "select_msg" : "今天18:30-20:30",
+                            "end_time" : "20:30",
+                            "end_timestamp" : strToTimestamp("20:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("18:30")
+                        },
+                        {
+                            "disableType" : 0,
+                            "fullFlag" : false,
+                            "disableMsg" : "",
+                            "textMsg" : "",
+                            "type" : 4,
+                            "start_time" : "20:30",
+                            "arrival_time_msg" : "20:30-22:30",
+                            "select_msg" : "今天20:30-22:30",
+                            "end_time" : "22:30",
+                            "end_timestamp" : strToTimestamp("22:30"),
+                            "arrival_time" : false,
+                            "start_timestamp" : strToTimestamp("20:30")
                         }
                     ],
-                    "is_invalid": false,
-                    "invalid_prompt": null,
-                    "time_full_text_tip": null
+                    "is_invalid" : false,
+                    "time_full_text_tip" : null
                 }
             ],
-            "station_id": stationId,
-            "is_new_rules": true,
-            "busy_soon_arrival_text": "",
-            "eta_trace_id": "",
-            "area_level": 1
+            "is_new_rules" : true,
+            "interval_minute" : -1,
+            "default_select" : false,
+            "eta_trace_id" : "",
+            "station_id" : "5b988449c0a1ea8f1c8b5a6b",
+            "area_level" : 1,
+            "busy_soon_arrival_text" : ""
         }
     ],
-    "tradeTag": "success",
-    "server_time": 1649033111,
-    "is_trade": 1
+    "code" : 0,
+    "success" : true,
+    "msg" : "success",
+    "is_trade" : 1,
+    "tradeTag" : "success"
 }
 
 var defaultData = {
@@ -196,7 +253,7 @@ var defaultData = {
         }
     ],
     "tradeTag": "success",
-    "server_time": 1680037200,
+    "server_time": nowTime,
     "is_trade": 1
 }
 
