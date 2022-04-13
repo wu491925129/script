@@ -1,12 +1,16 @@
 ## 说明
-目前教程都是针对iOS端的，不需要越狱，安卓百度叮咚助手
+目前教程都是针对iOS端的，不需要越狱，安卓百度叮咚助手。
+
+大润发和山姆目前只有监控没有重写（我这边这2个平台都没法配送，无法详细测试）
 
 ## 如何使用
 可能有风险，使用需谨慎
 
-实时监控：见详细教程.md文档
+- [详细教程](https://github.com/wu491925129/script/blob/main/%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B.md)
+- [重写教程](https://github.com/wu491925129/script/blob/main/%E9%87%8D%E5%86%99%E6%95%99%E7%A8%8B.md)
+- [大润发运力监控](https://github.com/wu491925129/script/blob/main/%E5%A4%A7%E6%B6%A6%E5%8F%91%E8%BF%90%E5%8A%9B%E7%9B%91%E6%8E%A7.md)
+- [山姆超市运力监控](https://github.com/wu491925129/script/blob/main/%E5%B1%B1%E5%A7%86%E8%B6%85%E5%B8%82%E8%BF%90%E5%8A%9B%E7%9B%91%E6%8E%A7.md)
 
-重写：见重写教程.md文档
 ## 更新记录
 
 **0413** 新增大润发运力监控，见 --> [大润发运力监控.md](https://github.com/wu491925129/script/blob/main/%E5%A4%A7%E6%B6%A6%E5%8F%91%E8%BF%90%E5%8A%9B%E7%9B%91%E6%8E%A7.md)
