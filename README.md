@@ -18,6 +18,9 @@
 
 ## 更新记录
 
+**0430** 由于老的获取时间接口叮咚服务器做了校验，因此使用首页的运力通知来实现监控，具体见[详细教程](https://github.com/wu491925129/script/blob/main/%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B.md)
+
+---
 **0413** 新增大润发运力监控，见 --> [大润发运力监控.md](https://github.com/wu491925129/script/blob/main/%E5%A4%A7%E6%B6%A6%E5%8F%91%E8%BF%90%E5%8A%9B%E7%9B%91%E6%8E%A7.md)
 
 **0413** 新增山姆会员超市运力监控，见 --> [山姆超市运力监控.md](https://github.com/wu491925129/script/blob/main/%E5%B1%B1%E5%A7%86%E8%B6%85%E5%B8%82%E8%BF%90%E5%8A%9B%E7%9B%91%E6%8E%A7.md)
